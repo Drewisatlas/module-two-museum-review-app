@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_12_180515) do
+ActiveRecord::Schema.define(version: 2018_11_12_185527) do
 
   create_table "museums", force: :cascade do |t|
     t.string "name"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2018_11_12_180515) do
     t.string "street_address"
     t.string "state"
     t.string "zip_code"
-    t.string "type"
+    t.string "museum_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
