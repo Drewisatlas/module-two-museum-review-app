@@ -10,10 +10,10 @@ class SessionsController < ApplicationController
     redirect_to user_path(user)
   end
 
-  # private
-  #
-  # def strong_params
-  #   params.permit(:username)
-  # end
+  def destroy
+    session.delete(:username)
+
+    redirect_to museums_path
+  end
 
 end
