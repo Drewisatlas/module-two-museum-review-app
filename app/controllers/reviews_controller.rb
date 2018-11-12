@@ -20,5 +20,5 @@ class ReviewsController < ApplicationController
 private
   def strong_params
     params.require(:review).permit(:title, :review, :rating, :museum_id)
-  end 
+  end
 end
