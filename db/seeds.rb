@@ -1,6 +1,9 @@
 require 'faker'
 include Faker
 
+User.destroy_all
+Museum.destroy_all
+
 100.times do
   User.create(
     username: Faker::Internet.email,
@@ -37,3 +40,8 @@ mutter = Museum.create(name: "Mutter Museum", city: "Philadelphia", street_addre
 dali = Museum.create(name: "Salvador Dali Museum", city: "St. Petersburg", street_address: "1 Dali Blvd", state: "FL", zip_code: "33701", museum_type: "Art Museum")
 
 met = Museum.create(name: "Metropolitan Museum of Art", city: "New York", street_address: "1000 5th Ave", state: "NY", zip_code: "10028", museum_type: "Art Museum")
+
+#Reviews
+r1 = Review.create(museum_id: met.id, user_id: User.all[0].id, title: "Great!", rating: 4, review: "Loved everything about this place except for the museum cafe")
+r2 = Review.create(museum_id: exploratorium.id, user_id: User.all[1].id, title: "Awful!", rating: 1, review: "Terrible experience - don't go!")
+r3 = Review.create(museum_id: r_r_hoff.id, user_id: User.all[3].id, title: "Eh", rating: 2, review: "So-so experience")
