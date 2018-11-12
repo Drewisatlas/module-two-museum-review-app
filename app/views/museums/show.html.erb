@@ -1,0 +1,14 @@
+<h1><%= @museum.name %></h1>
+
+<h2><%= @museum.city %></h2>
+
+<h2>Average Rating</h2>
+<!--Reference to ratings_average method for reviews (Museum instance method) -->
+
+<h2>Most Recent Reviews</h2>
+<!--Reference to recent_reviews method for reviews (Museum instance method) -->
+<br>
+<br>
+<p>Address: </p>
+<p><%= @museum.street_address %></p>
+<p><%= @museum.city %>, <%= @museum.state %>  <%= @museum.zip_code %></p>
