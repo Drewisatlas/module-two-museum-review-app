@@ -16,8 +16,3 @@ r_r_hoff = Museum.create(name: "Rock and Roll Hall of Fame", city: "Cleveland", 
 exploratorium = Museum.create(name: "Exploratorium", city: "San Francisco", street_address: "Pier 15 The Embarcadero", state: "CA", zip_code: "94111", type: "Science & Technology")
 mutter = Museum.create(name: "Mutter Museum", city: "Philadelphia", street_address: "19 22nd St", state: "PA", zip_code: "19103", type: "Natural History & Science")
 dali = Museum.create(name: "Salvador Dali Museum", city: "St. Petersburg", street_address: "1 Dali Blvd", state: "FL", zip_code: "33701", type: "Art Museum")
-
-
-#Users
-
-#Reviews
