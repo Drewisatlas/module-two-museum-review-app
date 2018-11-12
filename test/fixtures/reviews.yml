@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  museum_id: 1
+  user_id: 1
+  title: MyString
+  rating: 1
+  review: MyText
+
+two:
+  museum_id: 1
+  user_id: 1
+  title: MyString
+  rating: 1
+  review: MyText
