@@ -1,0 +1,9 @@
+<h1><%= @review.title %></h1>
+
+<h3>Museum: <%= link_to @review.museum.name, museum_path(@review.museum)%></h3>
+
+<p><%= @review.review %></p>
+
+<p>Reviewer: <%= @review.user.username %></p> <!--May make sense to have a show page that shows all the reviews for a user-->
+
+<h2>Rating: <%= @review.rating %></h2>
