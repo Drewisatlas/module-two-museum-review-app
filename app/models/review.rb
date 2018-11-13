@@ -29,4 +29,8 @@ class Review < ApplicationRecord
   def self.reviews_by_month(month)
     self.select {|review| review.monthitized == month}
   end
+
+  def self.keyword_locator(keyword)
+    self.select {|review| review.review.include?(keyword) || review.title.include?(keyword) }
+  end
 end
