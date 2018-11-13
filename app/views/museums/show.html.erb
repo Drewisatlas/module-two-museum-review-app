@@ -10,7 +10,7 @@
 <!--Reference to recent_reviews method for reviews (Museum instance method) -->
 <ul>
   <% @museum.most_recent_reviews.each do |review| %>
-    <li><%= review.title %>
+    <li><%= review.title %>, rating: <%= review.rating %>
     <br>
     <%= review.review %>
     <br>
@@ -20,6 +20,6 @@
 </ul>
 <br>
 <br>
-<p>Address: </p>
+<p>Museum Address: </p>
 <p><%= @museum.street_address %></p>
 <p><%= @museum.city %>, <%= @museum.state %>  <%= @museum.zip_code %></p>
