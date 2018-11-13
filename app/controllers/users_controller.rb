@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   private
 
   def strong_params
-    params.require(:user).permit(:username, :first_name, :last_name, :age, :email)
+    params.require(:user).permit(:username, :first_name, :last_name, :age, :email, :password, :password_confirmation)
   end
 
 end

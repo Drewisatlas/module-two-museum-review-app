@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :museums, through: :reviews
   has_many :user_types, through: :reviews
 
+  has_secure_password
   validates :username, uniqueness: true
 
   def percentages_by_museum_type(museum_type)

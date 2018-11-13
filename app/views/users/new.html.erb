@@ -18,18 +18,24 @@
 <%= form_for @user do |f| %>
   <%= f.label :username %><br>
   <%= f.text_field :username %><br>
-  <br>
+    <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+    <br>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+    <br>
   <%= f.label :first_name %><br>
   <%= f.text_field :first_name %><br>
-  <br>
+    <br>
   <%= f.label :last_name %><br>
   <%= f.text_field :last_name %><br>
-  <br>
+    <br>
   <%= f.label :age %><br>
   <%= f.number_field :age, in: 13..100 %><br>
-  <br>
+    <br>
   <%= f.label :email %><br>
   <%= f.text_field :email %><br>
-  <br>
+    <br>
   <%= f.submit %>
 <% end %>
