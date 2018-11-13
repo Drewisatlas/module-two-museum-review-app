@@ -1,1 +1,15 @@
-<h1><%= @user.username %></h1>
+<h1><%= "Hello " + @user.first_name %></h1>
+
+<h3> <%= link_to "Browse Museums", museums_path %></h3>
+
+<h3> <%= link_to "Submit a new Review", new_review_path %></h3>
+
+<h3> Past Reviews </h3>
+
+<ul>
+<% @reviews.each do |review|%>
+  <li> Rating: <%=review.rating%> "<%= link_to review.title, review_path(review) %>" <br>
+    <%=review.shorten_review%>
+  </li>
+<%end%>
+</ul>

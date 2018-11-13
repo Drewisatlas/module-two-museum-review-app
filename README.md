@@ -20,10 +20,11 @@ An analytics page - The main learning goal of this is to get you to write some i
 Museum show page should show:
 #done 1.) Museum info
 **Today** 2.) Average Rating
-**Today** 3.) three most recent reviews
+#done 3.) three most recent reviews
 
 #dry
-There needs to be a way to get to museums for the login page
+There needs to be a way to get to museums from the login page
+and we need to build out the log in page 
 
 
 
