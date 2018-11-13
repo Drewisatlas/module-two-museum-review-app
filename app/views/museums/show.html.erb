@@ -8,6 +8,16 @@
 <h2><%= link_to "Write a new Review", new_review_path  %></h2>
 <h2>Most Recent Reviews</h2>
 <!--Reference to recent_reviews method for reviews (Museum instance method) -->
+<ul>
+  <% @museum.most_recent_reviews.each do |review| %>
+    <li><%= review.title %>
+    <br>
+    <%= review.review %>
+    <br>
+    <p>Posted by: <%= review.user.username %>
+    </li>
+  <% end %>
+</ul>
 <br>
 <br>
 <p>Address: </p>
