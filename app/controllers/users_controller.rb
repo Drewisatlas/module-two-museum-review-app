@@ -20,13 +20,10 @@ class UsersController < ApplicationController
     @reviews = @user.reviews
   end
 
-<<<<<<< HEAD
-=======
+
   private
 
   def strong_params
     params.require(:user).permit(:username, :first_name, :last_name, :age, :email)
   end
-
->>>>>>> 3982002858f67c36693d878595cb71d41b9096bd
 end

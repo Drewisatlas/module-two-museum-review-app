@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :users, only: [:show, :new, :create]
   resources :museums, only: [:index, :show]
+  resources :analytics, only: [:index]
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/museums", to: "sessions#destroy", as: '/logout'

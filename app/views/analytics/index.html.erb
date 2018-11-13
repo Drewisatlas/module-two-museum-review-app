@@ -1,0 +1,18 @@
+<h1>Site Analytics</h1>
+
+<h2>Total Reviews written to date: <%= Review.count %></h2>
+<h2>Reviews Written each month</h2>
+  <ul>
+  <% @month_num.each_with_index do |month, i| %>
+    <li><%=@month_name[i].+ ": "%><%=Review.reviews_by_month(month).count%></li>
+  <%end%>
+  </ul>
+
+<h2>Average age of Reviewers: <%= Review.average_age_of_reviewer%></h2>
+<h2>Percentage of User Types:</h2>
+  <ul>
+  <% @user_types.each do |type| %>
+    <li><%=type.name+': '%><%=Review.percentage_by_user_type(type.name)%></li>
+  <%end%>
+  </ul>
+  <br>

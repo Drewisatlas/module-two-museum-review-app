@@ -33,4 +33,8 @@ class Review < ApplicationRecord
   def self.keyword_locator(keyword)
     self.select {|review| review.review.include?(keyword) || review.title.include?(keyword) }
   end
+
+  def self.total_reviews
+    self.count
+  end
 end
