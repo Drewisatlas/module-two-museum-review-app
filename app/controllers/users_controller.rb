@@ -5,5 +5,4 @@ class UsersController < ApplicationController
     @reviews = @user.reviews
   end
 
-
 end

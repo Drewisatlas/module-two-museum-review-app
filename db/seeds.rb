@@ -9,7 +9,7 @@ MuseumType.destroy_all
 
 100.times do
   User.create(
-    username: Faker::Internet.email,
+    username: Faker::Internet.user_name,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     age: Faker::Number.number(2),
