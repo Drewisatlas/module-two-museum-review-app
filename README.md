@@ -23,14 +23,25 @@ Museum show page should show:
 #done 3.) three most recent reviews
 
 #dry
-There needs to be a way to get to museums from the login page
-and we need to build out the log in page
+#done here needs to be a way to get to museums from the login page
+#done and we need to build out the log in page
+
+#analytic methods
+#done average Rating
+average age of reviewer (sitewide, and for museum)
+average rating by user type
+percentage of users by user type
+reviews sorted by month
+keyword locator for reviews
+returns an email address of anyone with a rating lower than 3
+a users reviews by museum type percentages
+a users average rating
 
 
 
 Stretch
-**Today** Have museum type class
-**Today** Have a user type class
+#done Have museum type class
+#done Have a user type class
 Each user needs a password
 
 # Project Task Guidelines
