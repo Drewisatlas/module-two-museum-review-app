@@ -39,4 +39,15 @@ class Museum < ApplicationRecord
     average.round(1)
   end
 
+  def bad_reviews
+    bad_reviews = self.reviews.select do |review|
+      review.rating < 3
+    end
+  end
+
+  def contact_sad_reviewers
+    self.bad_reviews.collect do |review|
+      review.user.email
+    end
+  end
 end
