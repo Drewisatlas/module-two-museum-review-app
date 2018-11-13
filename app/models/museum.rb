@@ -6,4 +6,12 @@ class Museum < ApplicationRecord
   def most_recent_reviews
     self.reviews.order("created_at").last(3)
   end
+
+  def ratings_average
+    ratings = self.reviews.collect do |review|
+      review.rating
+    end
+    average = ratings.inject { |sum, el| sum + el }.to_f / ratings.size
+    average.round(1)
+  end
 end
