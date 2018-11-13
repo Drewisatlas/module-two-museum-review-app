@@ -3,6 +3,7 @@ include Faker
 
 User.destroy_all
 Museum.destroy_all
+Review.destroy_all
 
 100.times do
   User.create(
@@ -49,7 +50,14 @@ dali = Museum.create(name: "Salvador Dali Museum", city: "St. Petersburg", stree
 
 met = Museum.create(name: "Metropolitan Museum of Art", city: "New York", street_address: "1000 5th Ave", state: "NY", zip_code: "10028", museum_type_id: art.id)
 
+#User Types
+explorer = UserType.create(name: "Explorer")
+facilitator = UserType.create(name: "Facilitator")
+prof = UserType.create(name: "Professional/Hobbyist")
+recharger = UserType.create(name: "Recharger")
+experience = UserType.create(name: "Experience Seeker")
+
 #Reviews
-r1 = Review.create(museum_id: met.id, user_id: User.all[0].id, title: "Great!", rating: 4, review: "Loved everything about this place except for the museum cafe")
-r2 = Review.create(museum_id: exploratorium.id, user_id: User.all[1].id, title: "Awful!", rating: 1, review: "Terrible experience - don't go!")
-r3 = Review.create(museum_id: r_r_hoff.id, user_id: User.all[3].id, title: "Eh", rating: 2, review: "So-so experience")
+r1 = Review.create(museum_id: met.id, user_id: User.all[0].id, title: "Great!", rating: 4, review: "Loved everything about this place except for the museum cafe", user_type_id: explorer.id)
+r2 = Review.create(museum_id: exploratorium.id, user_id: User.all[1].id, title: "Awful!", rating: 1, review: "Terrible experience - don't go!", user_type_id: recharger.id)
+r3 = Review.create(museum_id: r_r_hoff.id, user_id: User.all[3].id, title: "Eh", rating: 2, review: "So-so experience", user_type_id: facilitator.id)
