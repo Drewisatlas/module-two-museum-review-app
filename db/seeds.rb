@@ -4,7 +4,8 @@ include Faker
 User.destroy_all
 Museum.destroy_all
 Review.destroy_all
-UserType.destoy_all
+UserType.destroy_all
+MuseumType.destroy_all
 
 100.times do
   User.create(
@@ -67,3 +68,15 @@ r5 = Review.create(museum_id: exploratorium.id, user_id: User.all[68].id, title:
 r6 = Review.create(museum_id: exploratorium.id, user_id: User.all[68].id, title: "Fun, fun, fun!", rating: 5, review: "Loved experimenting and trying things out", user_type_id: explorer.id)
 r7 = Review.create(museum_id: exploratorium.id, user_id: User.all[83].id, title: "Great Place to Learn", rating: 3, review: "A great place to learn about the basics of science and physics in particular", user_type_id: prof.id)
 r8 = Review.create(museum_id: exploratorium.id, user_id: User.all[24].id, title: "Very good museum", rating: 4, review: "Had a nice time, but the museum was very busy and full of kids", user_type_id: recharger.id)
+
+#Faker Reviews
+100.times do
+  Review.create(
+    museum_id: Faker::Number.between(1, 10),
+    user_id: Faker::Number.between(1, 100),
+    title: Faker::Book.title,
+    rating: Faker::Number.between(1, 5),
+    review: Faker::Lorem.paragraph(sentence_count = 5),
+    user_type_id: Faker::Number.between(1, 5)
+  )
+end
