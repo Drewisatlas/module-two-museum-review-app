@@ -22,6 +22,10 @@ Museum show page should show:
 **Today** 2.) Average Rating
 **Today** 3.) three most recent reviews
 
+#dry
+There needs to be a way to get to museums for the login page
+
+
 
 Stretch
 **Today** Have museum type class

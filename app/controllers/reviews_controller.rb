@@ -20,7 +20,7 @@ class ReviewsController < ApplicationController
 
 private
   def strong_params
-    params.require(:review).permit(:title, :review, :rating, :museum_id)
+    params.require(:review).permit(:title, :review, :rating, :museum_id, :user_type_id)
   end
 
   def require_login

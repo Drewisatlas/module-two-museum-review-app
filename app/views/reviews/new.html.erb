@@ -5,11 +5,18 @@
   <%= f.label :rating %>
   <%= f.select :rating, [1, 2, 3, 4, 5]%>
   <br>
+  <br>
   <%= f.label :title %>
   <div><%= f.text_field :title%></div>
+  <br>
   <%= f.label :review %>
   <div><%= f.text_area :review%></div>
   <br>
-
+  <br>
+  <%= f.label "Reason for Visit" %>
+  <br>
+  <%= f.collection_select(:user_type_id, UserType.all, :id, :dropdown) %>
+  <br>
+  <br>
   <%= f.submit %>
 <%end%>

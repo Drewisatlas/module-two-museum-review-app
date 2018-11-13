@@ -4,6 +4,7 @@ include Faker
 User.destroy_all
 Museum.destroy_all
 Review.destroy_all
+UserType.destoy_all
 
 100.times do
   User.create(
@@ -51,11 +52,11 @@ dali = Museum.create(name: "Salvador Dali Museum", city: "St. Petersburg", stree
 met = Museum.create(name: "Metropolitan Museum of Art", city: "New York", street_address: "1000 5th Ave", state: "NY", zip_code: "10028", museum_type_id: art.id)
 
 #User Types
-explorer = UserType.create(name: "Explorer")
-facilitator = UserType.create(name: "Facilitator")
-prof = UserType.create(name: "Professional/Hobbyist")
-recharger = UserType.create(name: "Recharger")
-experience = UserType.create(name: "Experience Seeker")
+explorer = UserType.create(name: "Explorer", dropdown: "Just Curious")
+facilitator = UserType.create(name: "Facilitator", dropdown:"I wanted to bring someone close to me")
+prof = UserType.create(name: "Professional/Hobbyist", dropdown: "I am knowledgeable about this museum and wanted to see it")
+recharger = UserType.create(name: "Recharger", dropdown: "I wanted to broaden my world view")
+experience = UserType.create(name: "Experience Seeker", dropdown: "I have always wanted to come here")
 
 #Reviews
 r1 = Review.create(museum_id: met.id, user_id: User.all[0].id, title: "Great!", rating: 4, review: "Loved everything about this place except for the museum cafe", user_type_id: explorer.id)
