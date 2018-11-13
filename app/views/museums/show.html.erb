@@ -10,16 +10,16 @@
 <!--Reference to recent_reviews method for reviews (Museum instance method) -->
 <ul>
   <% @museum.most_recent_reviews.each do |review| %>
-    <li><%= review.title %>, rating: <%= review.rating %>
+    <li><%= link_to review.title, review_path(review) %>, rating: <%= review.rating %>
     <br>
-    <%= review.review %>
+    <%= review.shorten_review %>
     <br>
     <p>Posted by: <%= link_to review.user.username, user_path(review.user) %>
     </li>
   <% end %>
 </ul>
-<br>
-<br>
+  <br>
+  <br>
 <p>Museum Address: </p>
 <p><%= @museum.street_address %></p>
 <p><%= @museum.city %>, <%= @museum.state %>  <%= @museum.zip_code %></p>
