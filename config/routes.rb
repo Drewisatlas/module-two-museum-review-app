@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :museum_types
   resources :reviews
   resources :users, only: [:show]
   resources :museums, only: [:index, :show]
