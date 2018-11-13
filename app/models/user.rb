@@ -12,4 +12,12 @@ class User < ApplicationRecord
     num = my_reviews.size.to_f / self.reviews.size
     "#{(num * 100).round(2)}%"
   end
+
+  def average_ratings
+    my_ratings = self.reviews.collect do |review|
+      review.rating
+    end
+    my_averages = my_ratings.inject { |sum, el| sum + el }
+    my_averages.to_f / my_ratings. size
+  end
 end
