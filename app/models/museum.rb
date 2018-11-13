@@ -50,4 +50,8 @@ class Museum < ApplicationRecord
       review.user.email
     end
   end
+
+  def reviews_by_month(month)
+    self.reviews.select {|review| review.monthitized == month}
+  end
 end

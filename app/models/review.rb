@@ -21,4 +21,12 @@ class Review < ApplicationRecord
     num = (all_of_user_type.size.to_f / self.all.size)
     "#{(num * 100).round(2)}%"
   end
+
+  def monthitized
+    self.created_at.month
+  end
+
+  def self.reviews_by_month(month)
+    self.select {|review| review.monthitized == month}
+  end
 end
