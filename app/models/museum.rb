@@ -33,8 +33,8 @@ class Museum < ApplicationRecord
   end
 
   def ratings_average_by_user_type_id(id)
-    sorted_reviews = self.reviews.select {|review| review.user_id_type == type}
-    sorted_ratings = sorted_reviews.get_ratings
+    sorted_reviews = self.reviews.select {|review| review.user_type_id == id}
+    sorted_ratings = sorted_reviews.map {|review| review.rating}
     average = sorted_ratings.inject {|sum, el| sum + el }.to_f / sorted_reviews.size
     average.round(1)
   end
