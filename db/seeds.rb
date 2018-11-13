@@ -61,4 +61,9 @@ experience = UserType.create(name: "Experience Seeker", dropdown: "I have always
 #Reviews
 r1 = Review.create(museum_id: met.id, user_id: User.all[0].id, title: "Great!", rating: 4, review: "Loved everything about this place except for the museum cafe", user_type_id: explorer.id)
 r2 = Review.create(museum_id: exploratorium.id, user_id: User.all[1].id, title: "Awful!", rating: 1, review: "Terrible experience - don't go!", user_type_id: recharger.id)
-r3 = Review.create(museum_id: r_r_hoff.id, user_id: User.all[3].id, title: "Eh", rating: 2, review: "So-so experience", user_type_id: facilitator.id)
+r3 = Review.create(museum_id: exploratorium.id, user_id: User.all[2].id, title: "Eh", rating: 2, review: "So-so experience", user_type_id: facilitator.id)
+r4 = Review.create(museum_id: exploratorium.id, user_id: User.all[57].id, title: "Loved it!", rating: 5, review: "I would come here every day if I could!", user_type_id: recharger.id)
+r5 = Review.create(museum_id: exploratorium.id, user_id: User.all[68].id, title: "Really Great Time", rating: 4, review: "Learned a lot and my kids had fun", user_type_id: facilitator.id)
+r6 = Review.create(museum_id: exploratorium.id, user_id: User.all[68].id, title: "Fun, fun, fun!", rating: 5, review: "Loved experimenting and trying things out", user_type_id: explorer.id)
+r7 = Review.create(museum_id: exploratorium.id, user_id: User.all[83].id, title: "Great Place to Learn", rating: 3, review: "A great place to learn about the basics of science and physics in particular", user_type_id: prof.id)
+r8 = Review.create(museum_id: exploratorium.id, user_id: User.all[24].id, title: "Very good museum", rating: 4, review: "Had a nice time, but the museum was very busy and full of kids", user_type_id: recharger.id)
