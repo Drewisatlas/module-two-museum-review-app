@@ -20,14 +20,6 @@ class UsersController < ApplicationController
     @reviews = @user.reviews
   end
 
-  def review_writer
-    if self.username[-1] == "s"
-      "#{self.username}' Reviews"
-    else
-      "#{self.username}'s Reviews"
-    end
-  end
-
   private
 
   def strong_params
