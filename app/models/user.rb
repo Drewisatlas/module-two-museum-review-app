@@ -21,4 +21,12 @@ class User < ApplicationRecord
     my_averages = my_ratings.inject { |sum, el| sum + el }
     my_averages.to_f / my_ratings. size
   end
+
+  def review_writer
+    if self.username[-1] == "s"
+      "#{self.username}' Reviews"
+    else
+      "#{self.username}'s Reviews"
+    end
+  end
 end
