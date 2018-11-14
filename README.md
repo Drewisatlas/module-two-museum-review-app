@@ -58,6 +58,8 @@ user home page accessible in the layout
 make searches not case sensitive or punctuation sensitive
 add some extra validations
 css
+add keyword search to analytics pages
+add analytics methods to analytics views
 
 
 Stretch
