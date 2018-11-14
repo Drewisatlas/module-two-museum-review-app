@@ -2,9 +2,16 @@
 
 <h1>Please Select a Museum</h1>
 
+<h4>Or, select a museum by city:</h4>
+  <%= form_tag(museums_path, method: :get) do %>
+    <%= text_field_tag(:search_by_city, params[:search_by_city]) %>
+    <%= submit_tag "Search" %>
+  <% end %>
+
 <ul>
-<h2><% @museums.each do |museum| %>
-      <li><%= link_to museum.name, museum_path(museum) %></li>
+<% @museums.each do |museum| %>
+      <h2><li>
+        <%= link_to museum.name, museum_path(museum) %>
+      </li></h2>
     <% end %>
-</h2>
 </ul>

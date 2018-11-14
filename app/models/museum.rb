@@ -54,4 +54,17 @@ class Museum < ApplicationRecord
   def reviews_by_month(month)
     self.reviews.select {|review| review.monthitized == month}
   end
+
+  def self.search_by_city(search)
+    if search
+      museum = Museum.find_by(city: search)
+      if museum
+        self.where(city: search)
+      else
+        Museum.all
+      end
+    else
+      Museum.all
+    end
+  end
 end
