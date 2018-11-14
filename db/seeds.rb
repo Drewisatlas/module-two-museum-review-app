@@ -14,7 +14,8 @@ MuseumType.destroy_all
     last_name: Faker::Name.last_name,
     age: Faker::Number.number(2),
     email: Faker::Internet.email,
-    password: Faker::Internet.password
+    password: Faker::Internet.password,
+    admin: false
   )
 end
 # This file should contain all the record creation needed to seed the database with its default values.
@@ -60,16 +61,6 @@ prof = UserType.create(name: "Professional/Hobbyist", dropdown: "I am knowledgea
 recharger = UserType.create(name: "Recharger", dropdown: "I wanted to broaden my world view")
 experience = UserType.create(name: "Experience Seeker", dropdown: "I have always wanted to come here")
 
-#Reviews
-r1 = Review.create(museum_id: met.id, user_id: User.all[0].id, title: "Great!", rating: 4, review: "Loved everything about this place except for the museum cafe", user_type_id: explorer.id)
-r2 = Review.create(museum_id: exploratorium.id, user_id: User.all[1].id, title: "Awful!", rating: 1, review: "Terrible experience - don't go!", user_type_id: recharger.id)
-r3 = Review.create(museum_id: exploratorium.id, user_id: User.all[2].id, title: "Eh", rating: 2, review: "So-so experience", user_type_id: facilitator.id)
-r4 = Review.create(museum_id: exploratorium.id, user_id: User.all[57].id, title: "Loved it!", rating: 5, review: "I would come here every day if I could!", user_type_id: recharger.id)
-r5 = Review.create(museum_id: exploratorium.id, user_id: User.all[68].id, title: "Really Great Time", rating: 4, review: "Learned a lot and my kids had fun", user_type_id: facilitator.id)
-r6 = Review.create(museum_id: exploratorium.id, user_id: User.all[68].id, title: "Fun, fun, fun!", rating: 5, review: "Loved experimenting and trying things out", user_type_id: explorer.id)
-r7 = Review.create(museum_id: exploratorium.id, user_id: User.all[83].id, title: "Great Place to Learn", rating: 3, review: "A great place to learn about the basics of science and physics in particular", user_type_id: prof.id)
-r8 = Review.create(museum_id: exploratorium.id, user_id: User.all[24].id, title: "Very good museum", rating: 4, review: "Had a nice time, but the museum was very busy and full of kids", user_type_id: recharger.id)
-
 #Faker Reviews
 100.times do
   Review.create(
@@ -81,3 +72,6 @@ r8 = Review.create(museum_id: exploratorium.id, user_id: User.all[24].id, title:
     user_type_id: Faker::Number.between(1, 5)
   )
 end
+
+jenny =   User.create(username: "jennyjean", first_name: "Jenny", last_name: "I.", age: 39, email: "jenny@gmail.com", password: "blah", admin: true)
+andrew = User.create(username: "andrew", first_name: "Andrew", last_name: "R.", age: 32, email: "andrew@gmail.com", password: "blah", admin: true)

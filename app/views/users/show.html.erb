@@ -16,3 +16,7 @@
 <% else %>
     <%= "This user has not submitted any reviews" %>
 <% end %>
+<br>
+  <% if current_user == @user && authorized_for_admin(@user) %>
+    <%= link_to "Analytics Page", analytics_path %>
+  <% end %>
