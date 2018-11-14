@@ -28,21 +28,32 @@ Museum show page should show:
 
 #analytic methods
 #done average Rating
-average age of reviewer (sitewide, and for museum)
-average rating by user type
-percentage of users by user type
-reviews sorted by month
-keyword locator for reviews
-returns an email address of anyone with a rating lower than 3
+#average age of reviewer (sitewide, and for museum)
+#average rating by user type
+#percentage of users by user type
+#reviews sorted by month
+#keyword locator for reviews
+#returns an email address of anyone with a rating lower than 3
 a users reviews by museum type percentages
 a users average rating
 
+Show page for analytics for individual museums
+it should look like the museum analytics page
+count methods (just in case)
+
+establish a home page
+App needs a name
+
+write tests
 
 
 Stretch
 #done Have museum type class
 #done Have a user type class
-Each user needs a password
+#done Each user needs a password
+
+Permission to view analytics for admins, users cannot view
+
 
 # Project Task Guidelines
 come up with idea, model out domain.
