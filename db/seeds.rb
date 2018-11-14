@@ -73,5 +73,5 @@ experience = UserType.create(name: "Experience Seeker", dropdown: "I have always
   )
 end
 
-jenny =   User.create(username: "jennyjean", first_name: "Jenny", last_name: "I.", age: 39, email: "jenny@gmail.com", password: "blah", admin: true)
-andrew = User.create(username: "andrew", first_name: "Andrew", last_name: "R.", age: 32, email: "andrew@gmail.com", password: "blah", admin: true)
+jenny =   User.create(username: "jennyjean", first_name: "Jenny", last_name: "I.", age: 39, email: "jenny@gmail.com", password: "blah", admin: true, museum_admin_id: 7)
+andrew = User.create(username: "andrew", first_name: "Andrew", last_name: "R.", age: 32, email: "andrew@gmail.com", password: "blah", admin: true, museum_admin_id: 10)

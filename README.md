@@ -34,25 +34,33 @@ Museum show page should show:
 #reviews sorted by month
 #keyword locator for reviews
 #returns an email address of anyone with a rating lower than 3
-a users reviews by museum type percentages
-a users average rating
+#a users reviews by museum type percentages
+#a users average rating
 
 #Show page for analytics for individual museums
 #it should look like the museum analytics page
-count methods (just in case)
+#count methods (just in case)
 
-establish a home page
-App needs a name
-
-write tests
+#write tests
 
 
-Stretch
+
 #done Have museum type class
 #done Have a user type class
 #done Each user needs a password
 
-Permission to view analytics for admins, users cannot view
+#Permission to view analytics for admins, users cannot view
+
+establish a home page
+App needs a name
+what happens if you put in the wrong password
+user home page accessible in the layout
+make searches not case sensitive or punctuation sensitive
+add some extra validations
+css
+
+
+Stretch
 
 
 # Project Task Guidelines

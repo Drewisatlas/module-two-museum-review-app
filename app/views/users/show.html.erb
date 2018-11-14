@@ -20,3 +20,7 @@
   <% if current_user == @user && authorized_for_admin(@user) %>
     <%= link_to "Analytics Page", analytics_path %>
   <% end %>
+<br>
+  <% if current_user == @user && authorized_for_museum_admin(@user) %>
+    <%= link_to "#{Museum.find_by(id: @user.museum_admin_id).name} Analytics", analytic_path(@user.museum_admin_id)%>
+  <%end%>
