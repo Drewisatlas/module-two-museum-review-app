@@ -60,7 +60,6 @@ class Museum < ApplicationRecord
       museum = Museum.find_by(city: search)
       if museum
         self.where(city: search)
-
       end
     else
       Museum.all
