@@ -37,8 +37,8 @@ Museum show page should show:
 a users reviews by museum type percentages
 a users average rating
 
-Show page for analytics for individual museums
-it should look like the museum analytics page
+#Show page for analytics for individual museums
+#it should look like the museum analytics page
 count methods (just in case)
 
 establish a home page

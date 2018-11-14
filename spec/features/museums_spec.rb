@@ -29,4 +29,8 @@ describe "museums", type: :feature do
     expect(page).to have_link(@review.user.username, href: user_path(@review.user))
   end
 
+  it "should have a link to the login page" do
+    visit museum_path(@museum)
+    expect(page).to have_text("Login")
+  end
 end
