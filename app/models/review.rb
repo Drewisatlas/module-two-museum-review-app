@@ -4,7 +4,7 @@ class Review < ApplicationRecord
   belongs_to :user_type
 
   def shorten_review
-    self.review[0..20]+"..."
+    self.review[0..40]+"..."
   end
 
   def self.average_age_of_reviewer
@@ -36,5 +36,9 @@ class Review < ApplicationRecord
 
   def self.total_reviews
     self.count
+  end
+
+  def self.most_recent_reviews
+    self.order("created_at").last(3)
   end
 end
