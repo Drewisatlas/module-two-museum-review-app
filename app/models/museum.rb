@@ -65,4 +65,8 @@ class Museum < ApplicationRecord
       Museum.all
     end
   end
+
+  def keyword_locator(keyword)
+    self.reviews.select {|review| review.review.downcase.include?(keyword.downcase) || review.title.downcase.include?(keyword.downcase)}
+  end
 end
