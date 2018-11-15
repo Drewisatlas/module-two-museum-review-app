@@ -5,12 +5,15 @@
 <%= flash[:warning] %>
 <%= flash[:notice] %>
 
+<br>
+<br>
+
 <%= form_tag login_path do %>
   <label>Username: </label>
   <input name='username'><br>
-
+  <br>
   <label>Password: </label>
   <input type='password' name='password'><br>
-
+  <br>
   <input type='submit' value="login">
 <% end %>

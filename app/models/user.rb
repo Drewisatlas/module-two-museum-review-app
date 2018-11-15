@@ -4,7 +4,13 @@ class User < ApplicationRecord
   has_many :user_types, through: :reviews
 
   has_secure_password
+  validates :username, presence: true
   validates :username, uniqueness: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :age, presence: true
+  validates :email, presence: true
+  validates :email, uniqueness: true
 
   def percentages_by_museum_type(museum_type)
     my_reviews = self.reviews.select do |review|
