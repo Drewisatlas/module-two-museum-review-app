@@ -15,5 +15,11 @@ class AnalyticsController < ApplicationController
     @month_name = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept","Oct", "Nov", "Dec"]
   end
 
+  def search
+    @museum = Museum.find(params[:id])
+    @keyword = params[:query]
+    @results = @museum.keyword_locator(@keyword)
+  end
+
 
 end

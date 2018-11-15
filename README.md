@@ -51,12 +51,12 @@ Museum show page should show:
 
 #Permission to view analytics for admins, users cannot view
 
-establish a home page
-App needs a name
-what happens if you put in the wrong password
-user home page accessible in the layout
+#establish a home page
+#App needs a name
+#what happens if you put in the wrong password, or the username is not in database
+#user home page accessible in the layout
 make searches not case sensitive or punctuation sensitive
-add some extra validations
+add some extra validations (password requirements)
 css
 add keyword search to analytics pages
 add analytics methods to analytics views
