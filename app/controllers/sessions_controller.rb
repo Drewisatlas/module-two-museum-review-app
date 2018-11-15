@@ -5,13 +5,18 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(username: params[:username])
-    return head(:forbidden) unless @user.authenticate(params[:password])
-    @user.save
+    if @user != nil
+      @user.authenticate(params[:password])
+      @user.save
 
-    session[:username] = @user.username
-    session[:user] = @user.id
+      session[:username] = @user.username
+      session[:user] = @user.id
 
-    redirect_to user_path(@user)
+      redirect_to user_path(@user)
+    else
+      flash[:notice] = "This username/password combination cannot be found"
+    end
+
   end
 
   def destroy

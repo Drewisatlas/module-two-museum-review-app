@@ -3,11 +3,13 @@
   <h2>Share your Museum Experiences with Others</h2>
 </div>
 <br>
-<h2>Search for Museum by City:</h2>
-  <%= form_tag(museums_path, method: :get) do %>
-    <%= text_field_tag(:search_by_city, params[:search_by_city]) %>
-    <%= submit_tag "Search" %>
-  <% end %>
+<div class="search_text">
+  <h2>Search for Museum by City:</h2>
+    <%= form_tag(museums_path, method: :get) do %>
+      <%= text_field_tag(:search_by_city, params[:search_by_city]) %>
+      <%= submit_tag "Search" %>
+    <% end %>
+</div>
 <h3> Recent Reviews </h3>
   <div class="ui three column grid">
     <% @recent_reviews.each do |review|%>
