@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     @user.save
 
     session[:username] = @user.username
+    session[:user] = @user.id
 
     redirect_to user_path(@user)
   end

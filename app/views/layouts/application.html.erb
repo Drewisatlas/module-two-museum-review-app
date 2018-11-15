@@ -15,13 +15,13 @@
         <%= link_to "Browse Museums", museums_path, class: "teal item" %> <%= link_to "Submit a new Review", new_review_path, class: "teal item" %> <%= link_to "Home", root_path, class: "teal item" %>
 
     <% if session[:username] %>
-        <%= link_to "Logout", logout_path, method: :delete, class: "teal item" %>
-      <% else %>
-        <%= link_to "Login", login_path, class: "teal item" %>
+      <%= link_to "Logout", logout_path, method: :delete, class: "teal item" %>
+    <% else %>
+      <%= link_to "Login", login_path, class: "teal item" %>
     <% end %>
     </div>
     <% if session[:username] %>
-      <p><%= "Hello, #{session[:username]}" %>
+      <p><%= "Hello, #{session[:username]}" %> <%= link_to "My Reviews", user_path(session[:user]) %>
       <br>
     <% end %>
     <%= yield %>
