@@ -1,4 +1,4 @@
-<h1><%= @museum.name %></h1>
+<h1 class="museum_header"><%= @museum.name %></h1>
 
 <h2><%= @museum.city %></h2>
 
@@ -16,6 +16,7 @@
     <br>
     <p>Posted by: <%= link_to review.user.username, user_path(review.user) %>
     </li>
+    <br>
   <% end %>
 </ul>
   <br>

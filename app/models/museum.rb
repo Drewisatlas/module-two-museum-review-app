@@ -42,7 +42,7 @@ class Museum < ApplicationRecord
   def bad_reviews
     bad_reviews = self.reviews.select do |review|
       review.rating < 3
-    end
+    end.last(5)
   end
 
   def contact_sad_reviewers
