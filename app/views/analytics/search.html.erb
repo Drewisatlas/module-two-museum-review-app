@@ -1,0 +1,10 @@
+<h1> Reviews with keyword: <%=@keyword%> </h1>
+<% @results.each do |review| %>
+  <h2>Title</h2>
+  <p><%=review.title %></p>
+  <h4>Rating: <%=review.rating %></h4>
+  <h3>Author</h3>
+  <p><%=review.user.username %></p>
+  <h3>Review</h3>
+  <p><%=review.review %></p>
+  <%end%>

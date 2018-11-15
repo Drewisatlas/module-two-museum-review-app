@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/museums", to: "sessions#destroy", as: '/logout'
   post "/analytics/:id/search", to: "analytics#search", as:'search'
+  get "/analytics/:id/search/:term", to: "analytics#search_results"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

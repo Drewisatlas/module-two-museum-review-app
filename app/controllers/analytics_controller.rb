@@ -16,10 +16,16 @@ class AnalyticsController < ApplicationController
   end
 
   def search
-    @museum = Museum.find(params[:id])
+    @id = params[:id]
     @keyword = params[:query]
-    @results = @museum.keyword_locator(@keyword)
+    redirect_to "/analytics/#{@id}/search/#{@keyword}"
   end
 
+  def search_results
+    @keyword = params[:term]
+    @museum = Museum.find(params[:id])
+    @results = @museum.keyword_locator(@keyword)
+    render :search
+  end
 
 end
