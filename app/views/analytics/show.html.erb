@@ -2,13 +2,15 @@
 
 <h2>Total Reviews written to date: <%= @reviews.count %></h2>
 
-<%= form_tag search_path do %>
-<h2>Filter Reviews by Keyword:</h2>
-  <div>
-  <%= text_field_tag 'query', 'Enter your search query here' %>
-  <%= submit_tag "Search" %>
-  </div>
-<%end%>
+<div class="reviews_side_bar">
+  <%= form_tag search_path do %>
+    <h2>Filter Reviews by Keyword:</h2>
+    <div>
+      <%= text_field_tag 'query', 'Enter your search query here' %>
+      <%= submit_tag "Search" %>
+    </div>
+  <%end%>
+</div>
 <h2>Reviews Written each month</h2>
 <ul>
 <% @month_num.each_with_index do |month, i| %>

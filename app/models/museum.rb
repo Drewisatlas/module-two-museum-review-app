@@ -57,9 +57,9 @@ class Museum < ApplicationRecord
 
   def self.search_by_city(search)
     if search
-      museum = Museum.find_by(city: search)
+      museum = Museum.find_by(city: search.titlecase)
       if museum
-        self.where(city: search)
+        self.where(city: search.titlecase)
       end
     else
       Museum.all
