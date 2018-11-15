@@ -1,1 +1,8 @@
-<h1>Welcome to Museum Reviewer!</h1>
+<h1>MUSEE</h1>
+<div>Share your Museum Experiences with Others</div>
+<br>
+<h2>Search for Museum by City:</h2>
+  <%= form_tag(museums_path, method: :get) do %>
+    <%= text_field_tag(:search_by_city, params[:search_by_city]) %>
+    <%= submit_tag "Search" %>
+  <% end %>
