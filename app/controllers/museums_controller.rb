@@ -1,7 +1,7 @@
 class MuseumsController < ApplicationController
 
   def index
-  if Museum.search_by_city(params[:search_by_city]) != nil
+    if Museum.search_by_city(params[:search_by_city]) != nil
       @museums = Museum.search_by_city(params[:search_by_city])
     else
       @museums = Museum.all

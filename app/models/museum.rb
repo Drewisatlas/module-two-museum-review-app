@@ -58,6 +58,11 @@ class Museum < ApplicationRecord
   def self.search_by_city(search)
     if search
       museum = Museum.all.select {|museum| museum.city.downcase == search.downcase}
+      if museum.empty?
+        Museum.all
+      else
+        Museum.all.select {|museum| museum.city.downcase == search.downcase}
+      end
     else
       Museum.all
     end
