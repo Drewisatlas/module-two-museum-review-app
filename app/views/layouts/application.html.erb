@@ -10,25 +10,24 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <div class="ui inverted menu">
-        <%= link_to "Browse Museums", museums_path, class: "teal item" %>
-        <%= link_to "Submit a new Review", new_review_path, class: "teal item" %>
-        <%= link_to "Home", root_path, class: "teal item" %>
+  <body class="wrapper">
+      <div class="ui inverted menu">
+          <%= link_to "Browse Museums", museums_path, class: "teal item" %>
+          <%= link_to "Submit a new Review", new_review_path, class: "teal item" %>
+          <%= link_to "Home", root_path, class: "teal item" %>
 
-    <% if logged_in? %>
-      <%= link_to "My Reviews", user_path(current_user), class: "teal item" %>
-      <%= link_to "Logout", logout_path, method: :delete, class: "teal item" %>
-    <% else %>
-      <%= link_to "Login", login_path, class: "teal item" %>
-    <% end %>
-    </div>
-    <br>
+      <% if logged_in? %>
+        <%= link_to "My Reviews", user_path(current_user), class: "teal item" %>
+        <%= link_to "Logout", logout_path, method: :delete, class: "teal item" %>
+      <% else %>
+        <%= link_to "Login", login_path, class: "teal item" %>
+      <% end %>
+      </div>
+      <br>
 
-    <% if session[:username] %>
-      <p><%= "Hello, #{session[:username]}" %></p>
-    <% end %>
-    <%= yield %>
-
+      <% if session[:username] %>
+        <p><%= "Hello, #{session[:username]}" %></p>
+      <% end %>
+      <%= yield %>
   </body>
 </html>

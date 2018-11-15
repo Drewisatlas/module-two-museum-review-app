@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+.wrapper {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 1000 px;
+  background-image: url("http://nepinetwork.org/wp-content/uploads/2018/06/fluid-art-this-is-a-close-up-shot-from-one-of-my-abstract-flickr-for-color-decorations-10.jpg");
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 60px;
+  margin: 0;
+  padding: 20px;
+}
+
+.header h2 {
+  margin: 0;
+  padding: 20px;
+}

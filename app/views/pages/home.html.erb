@@ -1,5 +1,7 @@
-<h1>MUSEE</h1>
-<div>Share your Museum Experiences with Others</div>
+<div class="header">
+  <h1>MUSEE</h1>
+  <h2>Share your Museum Experiences with Others</h2>
+</div>
 <br>
 <h2>Search for Museum by City:</h2>
   <%= form_tag(museums_path, method: :get) do %>
@@ -7,10 +9,14 @@
     <%= submit_tag "Search" %>
   <% end %>
 <h3> Recent Reviews </h3>
-  <% @recent_reviews.each do |review|%>
-    <div>
-      <h4><%= review.museum.name %></h4>
-      <h5><%= review.title %></h5>
-      <p><%= review.shorten_review %></p>
-    </div>
-  <% end %>
+  <div class="ui three column grid">
+    <% @recent_reviews.each do |review|%>
+      <div class="column">
+        <div class="ui segment">
+          <h4><%= review.museum.name %></h4>
+          <h5><%= review.title %></h5>
+          <p><%= review.shorten_review %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
