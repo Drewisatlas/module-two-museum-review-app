@@ -19,7 +19,11 @@
       </ul>
     </div>
     <% if session[:username] %>
-        <div><%= "Hello #{session[:username]}" %> <%= link_to "Logout", logout_path, method: :delete %></div>
+        <div>
+          <%= "Hello #{session[:username]}" %>
+          <%= link_to "My Reviews", user_path(session[:user]) %>
+          <%= link_to "Logout", logout_path, method: :delete %>
+        </div>
       <% else %>
         <div><%= link_to "Login", login_path %></div>
     <% end %>
