@@ -41,4 +41,8 @@ class Review < ApplicationRecord
   def self.most_recent_reviews
     self.order("created_at").last(3)
   end
+
+  def date_written
+    self.created_at.strftime("%b %-d, %Y")
+  end
 end
