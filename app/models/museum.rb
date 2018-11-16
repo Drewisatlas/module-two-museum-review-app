@@ -59,7 +59,7 @@ class Museum < ApplicationRecord
     if search
       museum = Museum.all.select {|museum| museum.city.downcase == search.downcase}
       if museum.empty?
-        Museum.all
+        return nil
       else
         Museum.all.select {|museum| museum.city.downcase == search.downcase}
       end

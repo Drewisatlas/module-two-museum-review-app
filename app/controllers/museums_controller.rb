@@ -4,8 +4,8 @@ class MuseumsController < ApplicationController
     if Museum.search_by_city(params[:search_by_city]) != nil
       @museums = Museum.search_by_city(params[:search_by_city])
     else
+      flash[:alert] = "There are no results for that city"
       @museums = Museum.all
-      flash[:notice] = "There are no results for that city"
 
       redirect_to museums_path
     end
