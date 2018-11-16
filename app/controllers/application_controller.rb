@@ -21,17 +21,15 @@ class ApplicationController < ActionController::Base
 
   def authorized_for_admin(user)
     self.authorized
-    if current_user.admin == false
-      redirect_to museums_path
-    else
-      true
+    if current_user.admin == true
+      return true
     end
   end
 
   def authorized_for_museum_admin(user)
     self.authorized
     if !current_user.museum_admin_id
-      redirect_to museums_path
+      false
     else
       true
     end

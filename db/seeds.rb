@@ -7,7 +7,10 @@ Review.destroy_all
 UserType.destroy_all
 MuseumType.destroy_all
 
-100.times do
+jenny =   User.create(username: "jennyjean", first_name: "Jenny", last_name: "I.", age: 39, email: "jenny@gmail.com", password: "blahblah", admin: true, museum_admin_id: 7)
+andrew = User.create(username: "andrew", first_name: "Andrew", last_name: "R.", age: 32, email: "andrew@gmail.com", password: "blahblah", admin: false, museum_admin_id: 10)
+
+30.times do
   User.create(
     username: Faker::Internet.user_name,
     first_name: Faker::Name.first_name,
@@ -65,13 +68,10 @@ experience = UserType.create(name: "Experience Seeker", dropdown: "I have always
 100.times do
   Review.create(
     museum_id: Faker::Number.between(1, 10),
-    user_id: Faker::Number.between(1, 100),
+    user_id: Faker::Number.between(1, 30),
     title: Faker::Book.title,
     rating: Faker::Number.between(1, 5),
     review: Faker::Lorem.paragraph(sentence_count = 5),
     user_type_id: Faker::Number.between(1, 5)
   )
 end
-
-jenny =   User.create(username: "jennyjean", first_name: "Jenny", last_name: "I.", age: 39, email: "jenny@gmail.com", password: "blah", admin: true, museum_admin_id: 7)
-andrew = User.create(username: "andrew", first_name: "Andrew", last_name: "R.", age: 32, email: "andrew@gmail.com", password: "blah", admin: true, museum_admin_id: 10)
