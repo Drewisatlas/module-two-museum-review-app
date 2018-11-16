@@ -57,9 +57,9 @@ Museum show page should show:
 #user home page accessible in the layout
 make searches not case sensitive or punctuation sensitive
 add some extra validations (password requirements)
-css
-add keyword search to analytics pages
-add analytics methods to analytics views
+#css
+#add keyword search to analytics pages
+#add analytics methods to analytics views
 
 
 Stretch
