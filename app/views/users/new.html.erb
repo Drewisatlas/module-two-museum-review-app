@@ -1,4 +1,4 @@
-<h2>New Museum Reviewer Account</h2>
+<h1>New Museum Reviewer Account</h1>
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
@@ -16,26 +16,52 @@
 <% end %>
 
 <%= form_for @user do |f| %>
-  <%= f.label :username %><br>
-  <%= f.text_field :username %><br>
+  <div>
+    <%= f.label :username %> <br>
+    <%= f.text_field :username %><br>
+    <small>Example: john_doe</small><br>
     <br>
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
+  </div>
+
+  <div>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %><br>
+    <small>Example: password</small> <br>
     <br>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %><br>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %><br>
+    <small>Example: password</small> <br>
     <br>
-  <%= f.label :first_name %><br>
-  <%= f.text_field :first_name %><br>
+  </div>
+
+  <div>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %><br>
+    <small>Example: John</small> <br>
     <br>
-  <%= f.label :last_name %><br>
-  <%= f.text_field :last_name %><br>
+  </div>
+
+  <div>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %><br>
+    <small>Example: Doe</small> <br>
     <br>
-  <%= f.label :age %><br>
-  <%= f.number_field :age, in: 13..100 %><br>
+  </div>
+
+  <div>
+    <%= f.label :age %><br>
+    <%= f.number_field :age, in: 13..100 %><br>
     <br>
-  <%= f.label :email %><br>
-  <%= f.text_field :email %><br>
+  </div>
+
+  <div>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %><br>
+    <small>Example: johndoe@email.com</small> <br>
     <br>
+  </div>
   <%= f.submit %>
 <% end %>

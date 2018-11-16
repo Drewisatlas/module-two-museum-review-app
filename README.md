@@ -56,7 +56,7 @@ Museum show page should show:
 #what happens if you put in the wrong password, or the username is not in database
 #user home page accessible in the layout
 make searches not case sensitive or punctuation sensitive
-add some extra validations (password requirements)
+#add some extra validations (password requirements)
 #css
 #add keyword search to analytics pages
 #add analytics methods to analytics views
