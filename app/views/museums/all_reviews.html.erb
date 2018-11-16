@@ -1,0 +1,11 @@
+<h1><%=@museum.name%> Reviews</h1>
+
+<% @museum.reviews.each do |review|%>
+  <h2><%= review.title %></h2>
+  <h3>Rating: <%=review.rating%></h3>
+  <p> <%= review.review %></p>
+  <h4>Reviewer: <%= review.user.username %></h4>
+  <h4><%=@review.date_written %></h4>
+  <br>
+  <br>
+<%end%>

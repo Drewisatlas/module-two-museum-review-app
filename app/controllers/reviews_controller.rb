@@ -30,5 +30,4 @@ private
       redirect_to login_path  # halts request cycle
     end
   end
-
 end

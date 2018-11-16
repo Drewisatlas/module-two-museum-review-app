@@ -15,6 +15,10 @@ class MuseumsController < ApplicationController
     @museum = Museum.find(params[:id])
   end
 
+  def all_reviews
+    @museum = Museum.find(params[:id])
+  end
+
   private
 
   def strong_params
