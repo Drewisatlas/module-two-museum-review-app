@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates :age, presence: true
   validates :email, presence: true
   validates :email, uniqueness: true
+  validates :password, length: {minimum: 6}
 
   def percentages_by_museum_type(museum_type)
     my_reviews = self.reviews.select do |review|

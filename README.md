@@ -1,73 +1,56 @@
 # README
 
-You should have least five models. You do not have to have all of these built out on day one. But by the end of the week, you should have at least five models.
+## Module 2 Project
 
-Some methods in your models. There should be at least twenty methods total in your models. These are to be used to better extract data from your tables. Think Flatiron BnB Lab
+### Project Requirements:
+1. You should have least five models. 
+2. There should be at least twenty methods total in your models. These are to be used to better extract data from your tables.
+3. No APIs until you get approval from an instructor.
+4. Specs - there should be at least 10 specs in your project (five per person).
+5. An analytics page - The main learning goal of this is to get you to write some interesting activerecord queries.
 
-No APIs until you get approval from an instructor. The reason is because API's oftentimes leads you to learning the specific API really well, but not learning Rails that well. Rails is a more transferable skill. So stick with that.
+**No JavaScript. Stay focused on Rails for this project **
 
-Specs - there should be at least 10 specs in your project (five per person).
+### Project Task Guidelines
+- Come up with idea, model out domain.
+- Add model tests, start building out basic features. Have some functionality built out by the end of the day.
+- Iterate on the features that you built yesterday. Go from a 'skateboard' version to a scooter or a bicycle. It doesnt' have to be perfect, but it should be working.
+- Start styling/ cleaning up issues.
+- Issue cleanup and final demos.
 
-An analytics page - The main learning goal of this is to get you to write some interesting activerecord queries.
+# MUSEE
+### Share Your Meseum Experience With Others 
+##### By: Andrew Rivera and Jenny Ingram
 
-**No JavaScript. Stay focused on Rails for this project - we'll have plenty of time this semeseter to cover JS topics.**
+MUSEE is a website that allows users to read and write reviews for museums.
 
+### User Functionality
+1. Anyone that visits the site can read reviews for museums.
+2. Anyone can create a User Profile
+3. Users can write reviews and rate museums.
+4. Admins for the website can view sitewide analytics.
+5. Users can be given permission to view analytics for a specific museum (if they work for the museum).
 
-#spec
+### Reviews
+1. A review and rating belongs to a specific museum, and user.
+2. Reviews also collect information to determine what brought a visitor to a specific museum, and assigns the a specific user type.
 
-#done A user should be able to post reviews
-#done A user needs a log in to post a review, but not view reviews
-Museum show page should show:
-#done 1.) Museum info
-#done 2.) Average Rating
-#done 3.) three most recent reviews
+### Mueseums
+1. Museums have information about the location, and a museum type.
+2. A museums show page will show an average rating for the museum, snippets of the 3 most recent reviews and a link to a portion of the site that shows all reviews.
+3. There is search functionality to search for museums by city.
 
-#dry
-#done here needs to be a way to get to museums from the login page
-#done and we need to build out the log in page
+### Analytics
+1. There are two separate anayltics pages: Analytics for the entirety of the site, and analytics for each museum.
+2. Users do not have access to the analytics page unless they are a website admin, or granted permission to view analytics for a specific museum. 
 
-#analytic methods
-#done average Rating
-#average age of reviewer (sitewide, and for museum)
-#average rating by user type
-#percentage of users by user type
-#reviews sorted by month
-#keyword locator for reviews
-#returns an email address of anyone with a rating lower than 3
-#a users reviews by museum type percentages
-#a users average rating
-
-#Show page for analytics for individual museums
-#it should look like the museum analytics page
-#count methods (just in case)
-
-#write tests
-
-
-
-#done Have museum type class
-#done Have a user type class
-#done Each user needs a password
-
-#Permission to view analytics for admins, users cannot view
-
-#establish a home page
-#App needs a name
-#what happens if you put in the wrong password, or the username is not in database
-#user home page accessible in the layout
-make searches not case sensitive or punctuation sensitive
-add some extra validations (password requirements)
-css
-add keyword search to analytics pages
-add analytics methods to analytics views
-
-
-Stretch
-
-
-# Project Task Guidelines
-come up with idea, model out domain.
-add model tests, start building out basic features. Have some functionality built out by the end of the day.
-Iterate on the features that you built yesterday. Go from a 'skateboard' version to a scooter or a bicycle. It doesnt' have to be perfect, but it should be working.
-start styling/ cleaning up issues.
-issue cleanup and final demos.
+#### Analytics Include:
++ Total reviews written (for the site, and for each museum)
++ Reviews written each month
++ Average age of reviewer
++ Percentage of user types submitting reviews
++ Average rating for museums
++ Average rating by user type for museums
++ Most recent bad reviews
++ The email addresses for users that have written a review with a rating of less than 3 (scale is 1 to 5).
++ Keyword search for all of the reviews for a particular museum
