@@ -54,11 +54,3 @@ MUSEE is a website that allows users to read and write reviews for museums.
 + Most recent bad reviews
 + The email addresses for users that have written a review with a rating of less than 3 (scale is 1 to 5).
 + Keyword search for all of the reviews for a particular museum
-
-
-# Project Task Guidelines
-come up with idea, model out domain.
-add model tests, start building out basic features. Have some functionality built out by the end of the day.
-Iterate on the features that you built yesterday. Go from a 'skateboard' version to a scooter or a bicycle. It doesnt' have to be perfect, but it should be working.
-start styling/ cleaning up issues.
-issue cleanup and final demos.
