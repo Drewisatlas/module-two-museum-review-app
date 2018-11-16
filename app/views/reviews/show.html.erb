@@ -5,5 +5,6 @@
 <p><%= @review.review %></p>
 
 <p>Reviewer: <%= link_to @review.user.username, user_path(@review.user) %></p> <!--May make sense to have a show page that shows all the reviews for a user-->
+<p>Date Written: <%= @review.date_written %>
 
 <h2>Rating: <%= @review.rating %></h2>

@@ -53,6 +53,14 @@ main {
   padding: 20px;
 }
 
+.user_header {
+  font-size: 40px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: rgb(238, 152, 92);
+  color: white;  
+}
+
 .search_text {
   text-align: center;
 }

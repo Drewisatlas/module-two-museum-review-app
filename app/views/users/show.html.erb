@@ -1,4 +1,4 @@
-<h1><%=@user.review_writer%></h1>
+<h1 class="user_header"><%=@user.review_writer%></h1>
 <h2>My Ratings Average for all reviews:
   <% if @reviews.any? %>
     <%= @user.average_ratings %></h2>
@@ -8,9 +8,10 @@
 <% if @reviews %>
   <ul>
     <% @reviews.each do |review|%>
-      <li> Rating: <%=review.rating%> <p><%= link_to review.title, review_path(review) %></p><br>
+      <li> Rating: <%=review.rating%> <p><%= link_to review.title, review_path(review) %></p>
       <%=review.shorten_review%>
       </li>
+      <br>
     <% end %>
   </ul>
 <% else %>
