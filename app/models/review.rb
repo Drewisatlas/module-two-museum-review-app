@@ -1,3 +1,4 @@
+
 class Review < ApplicationRecord
   belongs_to :museum
   belongs_to :user
@@ -11,7 +12,7 @@ class Review < ApplicationRecord
     ages = self.all.collect do |review|
       review.user.age
     end
-    average_age = ages.inject { |sum, el| sum + el } / ages.size
+    average_age = ages.inject { |sum, el| sum + el }.to_f / ages.size.to_f
   end
 
   def self.percentage_by_user_type(user_type)
